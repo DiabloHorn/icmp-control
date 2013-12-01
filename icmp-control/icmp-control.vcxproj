@@ -10,6 +10,12 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="icmpcontrol.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="icmpcontrol.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{39943543-5613-4871-87BC-24558A40137E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -73,8 +79,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

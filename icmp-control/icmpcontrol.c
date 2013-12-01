@@ -87,7 +87,7 @@ void main(int argc,char *argv[])
 	icmp_packet->icmp.icmp_id = (unsigned short)GetTickCount();
 //Filling the echodata buffer with a's can also be filled with other things as well ;)
 	memset(icmp_packet->echoData,'a',DATALEN);
-	memcpy(icmp_packet->echoData,argv[3],strlen(argv[3]));
+	//memcpy(icmp_packet->echoData,argv[3],strlen(argv[3]));
 //Calculating the checksum for the icmp header.
 	icmp_packet->icmp.icmp_cksum = checksum((unsigned short*)sbuffer,sizeof(icmpreq));
 //Setting the correct options for the socket. Thus making it take our own ip header
