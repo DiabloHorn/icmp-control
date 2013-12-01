@@ -50,7 +50,7 @@ void main(int argc,char *argv[])
 	{
 		printf("WSAStartup() failed\n");
 	}
-//normal socket making
+//setup the raw socket
 	if((sock = socket(AF_INET,SOCK_RAW,IPPROTO_RAW)) == SOCKET_ERROR)
 	{
 		printf("Socket failed %d\n",GetLastError());
@@ -77,7 +77,7 @@ void main(int argc,char *argv[])
 	icmp_packet->sphdr.ip_ttl = 255;
 	icmp_packet->sphdr.ip_p = IPPROTO_ICMP;
 	icmp_packet->sphdr.ip_sum = 0;
-//The following line is where we spoofe the sender ip like you can see it's just 1 line;)
+//The following line is where we spoof the sender ip like you can see it's just 1 line;)
 	icmp_packet->sphdr.ip_src = inet_addr(argv[2]);
 	icmp_packet->sphdr.ip_dst = dinfo.sin_addr.s_addr;
 //Here we are filling the icmp header.
