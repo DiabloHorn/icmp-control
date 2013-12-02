@@ -1,0 +1,10 @@
+This is the visual studio 2010 express project for the source from this blog post:
+http://diablohorn.wordpress.com/2008/12/06/icmp-spoof/
+
+It's old & dirty but you can now just fire up the project, instead of making your own.
+Since this uses raw sockets, be aware of the many limitations that Microsoft imposes.
+
+Additionally the commandline for this is:
+icmp-spoof.exe <destination addr> <source addr>
+
+Use a non-spoofed source addr if you are testing this on a > Windows XP
